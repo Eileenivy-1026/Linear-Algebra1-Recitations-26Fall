@@ -18,7 +18,7 @@ jobs:
       - name: Convert Marp to HTML
         run: |
           # 使用 npx 直接运行 marp-cli，将当前目录所有 md 转换为 html
-          npx @marp-team/marp-cli@latest . --html --output dist
+         npx @marp-team/marp-cli@latest -I . -o dist --html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
